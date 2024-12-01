@@ -1,0 +1,61 @@
+/* فایل styles.css یا App.css */
+
+.react-calendar {
+  min-width: 350px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:#89A8B2 ;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #F1F0E8; /* تنظیم بک‌گراند کلی تقویم */
+}
+
+.react-calendar span, button {
+  
+  color:#89A8B2;
+}
+
+.react-calendar .react-calendar__month-view__days button {
+  background-color: #E5E1DA;
+  border: 2px solid #F1F0E8 ;
+  border-radius: 5px;
+}
+
+.custom-tile {
+  background-color: #E5E1DA !important; /* تنظیم بک‌گراند روزهای تقویم */
+}
+
+
+
+/* استایل سفارشی برای روز انتخاب شده */
+.react-calendar__tile--active {
+  background-color: #89A8B2 !important; /* تغییر رنگ بک‌گراند به مشکی */
+  color: #ffffff !important; /* تغییر رنگ متن به سفید */
+}
+
+/* می‌توانید استایل‌های دیگر را نیز به این فایل اضافه کنید */
+
+
+@media (max-width: 400px) {
+
+
+  h1{
+    font-size: 1.2rem;
+  }
+
+  span {
+    font-size: 0.5rem; /* کوچکتر کردن عنوان */
+    padding: 5px 0; /* کاهش پدینگ */
+  }
+}
+
+/* استایل سفارشی برای روزهای دارای تسک */
+.task-day {
+  background-color: #a2e0a2 !important; /* رنگ سبز پاستیلی برای روزهای دارای تسک */
+  color: #ffffff;
+}
+

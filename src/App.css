@@ -40,3 +40,88 @@
 .read-the-docs {
   color: #888;
 }
+
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: none;
+  border: none; /* حذف بوردر */
+}
+
+h1 {
+  color: #89A8B2;
+  font-size: 2rem;
+  padding: 10px 0; /* اضافه کردن پدینگ کلی */
+}
+
+.total-tasks, .completed-tasks, .incomplete-tasks {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.total-tasks {
+  color: gray;
+}
+
+.completed-tasks {
+  color: #77dd77;
+}
+
+.incomplete-tasks {
+  color: #ff6961;
+}
+
+.add-task-btn {
+  background-color: white;
+  color: #B3C8CF;
+  border: none;
+}
+
+.todo-item {
+  font-size: 1rem; /* سایز فونت در بخش تسک‌ها */
+}
+
+.todo-item .btn {
+  background-color: white;
+}
+
+@media (max-width: 400px) {
+  .total-tasks, .completed-tasks, .incomplete-tasks {
+    font-size: 0.6rem; /* کوچکتر کردن فونت */
+  }
+
+  .add-task-btn {
+    font-size: 0.8rem; /* کوچکتر کردن آیکون */
+  }
+
+  .todo-item {
+    font-size: 0.8rem; /* کوچکتر کردن فونت در بخش تسک‌ها */
+    display: flex;
+    flex-direction: column; /* قرارگیری بخش‌ها زیر هم */
+    align-items: center; /* قرارگیری در وسط صفحه */
+    padding: 10px; /* اضافه کردن پدینگ */
+  }
+
+  .todo-item .task-content {
+    margin-bottom: 10px; /* فاصله بین بخش‌ها */
+  }
+
+  .todo-item .task-actions {
+    margin-bottom: 10px; /* فاصله بین بخش‌ها */
+  }
+
+  .todo-item .task-meta {
+    margin-bottom: 10px; /* فاصله بین بخش‌ها */
+  }
+
+  .todo-item .btn {
+    font-size: 0.8rem; /* کوچکتر کردن آیکون‌ها در بخش تسک‌ها */
+  }
+
+  h1 {
+    font-size: 1.2rem; /* کوچکتر کردن عنوان */
+    padding: 5px 0; /* کاهش پدینگ */
+  }
+}
+
+
+
