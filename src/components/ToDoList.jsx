@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ToDoItem from './ToDoItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSquarePlus, faFlagCheckered, faCircleExclamation, faListOl } from '@fortawesome/free-solid-svg-icons';
+import { faSquarePlus, faFlagCheckered, faCircleExclamation, faListOl, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import '../App.css'; // اطمینان از وجود و درستی مسیر فایل CSS
 
 function ToDoList() {
@@ -56,8 +56,7 @@ function ToDoList() {
     saveTasks(newTasks);
   };
 
-  const handleSaveAndBack = () => {
-    saveTasks(tasks);
+  const handleBackToCalendar = () => {
     navigate('/'); // بازگشت به صفحه اصلی (تقویم)
   };
 
@@ -140,7 +139,9 @@ function ToDoList() {
         ))}
       </div>
       <div className="d-flex justify-content-end mt-4" style={{ border: 'none' }}>
-        <button className="btn btn-secondary" onClick={handleSaveAndBack} style={{ border: 'none' }}>Save and Back to Calendar</button>
+        <button className="btn btn-secondary" onClick={handleBackToCalendar} style={{ border: 'none' }}>
+          <FontAwesomeIcon icon={faCalendarAlt} />
+        </button>
       </div>
     </div>
   );

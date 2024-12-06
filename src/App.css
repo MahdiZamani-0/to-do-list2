@@ -85,13 +85,20 @@ h1 {
 }
 
 @media (max-width: 400px) {
-  .total-tasks, .completed-tasks, .incomplete-tasks {
-    font-size: 0.6rem; /* کوچکتر کردن فونت */
+  *{
+    font-size: 10px;
+  }
+
+  .todo-item span{
+    font-size: 10px;
+  }
+  /* .total-tasks, .completed-tasks, .incomplete-tasks {
+    font-size: 0.6rem; 
   }
 
   .add-task-btn {
-    font-size: 0.8rem; /* کوچکتر کردن آیکون */
-  }
+    font-size: 0.8rem; 
+  } */
 
   .todo-item {
     font-size: 0.8rem; /* کوچکتر کردن فونت در بخش تسک‌ها */
@@ -99,7 +106,7 @@ h1 {
     flex-direction: column; /* قرارگیری بخش‌ها زیر هم */
     align-items: center; /* قرارگیری در وسط صفحه */
     padding: 10px; /* اضافه کردن پدینگ */
-  }
+  } */
 
   .todo-item .task-content {
     margin-bottom: 10px; /* فاصله بین بخش‌ها */

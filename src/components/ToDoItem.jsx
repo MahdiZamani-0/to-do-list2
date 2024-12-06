@@ -75,22 +75,21 @@ function ToDoItem({ task, index, completeTask, removeTask, editTask }) {
               {task.text}
             </span>
             {task.note && (
-              <small className="d-block text-muted">
+              <small className="d-block text-muted" style={{ wordWrap: 'break-word', whiteSpace: 'normal' }}>
                 {task.note}
               </small>
             )}
           </>
         )}
       </div>
-      <div className="d-flex flex-column align-items-end mt-2">
+      <div className="w-100 d-flex flex-column align-items-end mt-2">
         <div className="d-flex justify-content-end flex-wrap mb-2">
           {isEditing ? (
             <button
-              className="btn btn-sm mr-2"
+              className="btn btn-sm mr-2 mb-1"
               onClick={handleSave}
               disabled={newText.trim() === ''}
-              style={{ backgroundColor: 'white', border: 'none', outline: 'none', color: '#77dd77' }} // حذف بوردر و outline، رنگ و پس‌زمینه دکمه سیو
-              onFocus={(e) => e.target.style.outline = 'none'} // حذف outline هنگام فوکوس
+              style={{ backgroundColor: 'white', border: 'none', outline: 'none' }}
             >
               <FontAwesomeIcon icon={faFloppyDisk} color="gray" />
             </button>
@@ -99,31 +98,28 @@ function ToDoItem({ task, index, completeTask, removeTask, editTask }) {
               <button
                 className="btn btn-sm mr-2 mb-1"
                 onClick={handleEdit}
-                style={{ backgroundColor: 'white', border: 'none', outline: 'none' }} // حذف بوردر و outline
-                onFocus={(e) => e.target.style.outline = 'none'} // حذف outline هنگام فوکوس
+                style={{ backgroundColor: 'white', border: 'none', outline: 'none' }}
               >
                 <FontAwesomeIcon icon={faPenToSquare} color="gray" />
               </button>
               <button
                 className="btn btn-sm mr-2 mb-1"
                 onClick={() => completeTask(index)}
-                style={{ backgroundColor: 'white', border: 'none', outline: 'none' }} // حذف بوردر و outline
-                onFocus={(e) => e.target.style.outline = 'none'} // حذف outline هنگام فوکوس
+                style={{ backgroundColor: 'white', border: 'none', outline: 'none' }}
               >
                 <FontAwesomeIcon icon={faCheck} color="#77dd77" />
               </button>
               <button
                 className="btn btn-sm mb-1"
                 onClick={() => removeTask(index)}
-                style={{ backgroundColor: 'white', border: 'none', outline: 'none' }} // حذف بوردر و outline
-                onFocus={(e) => e.target.style.outline = 'none'} // حذف outline هنگام فوکوس
+                style={{ backgroundColor: 'white', border: 'none', outline: 'none' }}
               >
                 <FontAwesomeIcon icon={faTrash} color="#ff6961" />
               </button>
             </>
           )}
         </div>
-        <div className="d-flex flex-column align-items-end w-100">
+        <div className="d-flex w-100 justify-content-between">
           <span className="badge badge-secondary mb-2" style={{ border: 'none', backgroundColor: 'white', color: '#B3C8CF' }}>#{task.category}</span>
           <small className="text-muted" style={{ fontSize: '0.8em', textAlign: 'right' }}>
             {task.timestamp}
